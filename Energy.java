@@ -14,6 +14,12 @@ import java.util.Scanner;
 * .Class constructor Energy.
 */
 final class Energy {
+
+    /**
+     * Speed of light, m/s.
+     */
+    public static final double SPEED_LIGHT = 2.998 * Math.pow(10, 8);
+
     /**
      * Prevent instantiation.
      * Throw an exception IllegalStateException
@@ -41,7 +47,7 @@ final class Energy {
             final float mass = scan.nextFloat();
 
             // Calculates the object's energy
-            final double energy = Math.pow(mass * (2.998 * Math.pow(10, 8)), 2);
+            final double energy = Math.pow(mass * SPEED_LIGHT, 2);
 
             // Prints out the result
             System.out.printf("%fkg of mass would produce %gJ of energy.\n",
